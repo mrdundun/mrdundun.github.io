@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="Go," />
 
 
 
@@ -80,58 +80,58 @@
 
 
 
-<meta name="description" content="指令init$ hexo init [folder]
-新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。
-server$ hexo server
-启动服务器。默认情况下，访问网址为：http://localhost:4000/。
+<meta name="description" content="安装Go安装Go开发包brew install go
+设置环境变量vi ~/.bash_profile
 
+### 打开编辑.bash_profile文件
 
+export GOPATH=$HOME/go
 
-选项
-描述                          
+export PATH=$HOME/bin:$GOPATH/bin:$PATH
 
+### 添加环境变量
 
+source ~/.bash_profile
 
-
--p, –port
-重设端口">
+### 保存并生效
+测试运行package">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo常用指令">
-<meta property="og:url" content="http://yoursite.com/2016/05/02/Hexo常用指令/index.html">
+<meta property="og:title" content="Go环境搭建">
+<meta property="og:url" content="http://yoursite.com/2016/05/02/Go环境搭建/index.html">
 <meta property="og:site_name" content="Mrdundun">
-<meta property="og:description" content="指令init$ hexo init [folder]
-新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。
-server$ hexo server
-启动服务器。默认情况下，访问网址为：http://localhost:4000/。
+<meta property="og:description" content="安装Go安装Go开发包brew install go
+设置环境变量vi ~/.bash_profile
 
+### 打开编辑.bash_profile文件
 
+export GOPATH=$HOME/go
 
-选项
-描述                          
+export PATH=$HOME/bin:$GOPATH/bin:$PATH
 
+### 添加环境变量
 
+source ~/.bash_profile
 
-
--p, –port
-重设端口">
-<meta property="og:updated_time" content="2016-05-02T13:35:46.000Z">
+### 保存并生效
+测试运行package">
+<meta property="og:updated_time" content="2016-05-02T13:22:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo常用指令">
-<meta name="twitter:description" content="指令init$ hexo init [folder]
-新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。
-server$ hexo server
-启动服务器。默认情况下，访问网址为：http://localhost:4000/。
+<meta name="twitter:title" content="Go环境搭建">
+<meta name="twitter:description" content="安装Go安装Go开发包brew install go
+设置环境变量vi ~/.bash_profile
 
+### 打开编辑.bash_profile文件
 
+export GOPATH=$HOME/go
 
-选项
-描述                          
+export PATH=$HOME/bin:$GOPATH/bin:$PATH
 
+### 添加环境变量
 
+source ~/.bash_profile
 
-
--p, –port
-重设端口">
+### 保存并生效
+测试运行package">
 
 
 
@@ -149,7 +149,7 @@ server$ hexo server
   };
 </script>
 
-  <title> Hexo常用指令 | Mrdundun </title>
+  <title> Go环境搭建 | Mrdundun </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -279,7 +279,7 @@ server$ hexo server
             
             
               
-                Hexo常用指令
+                Go环境搭建
               
             
           </h1>
@@ -291,7 +291,7 @@ server$ hexo server
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-02T15:28:39+08:00" content="2016-05-02">
+            <time itemprop="dateCreated" datetime="2016-05-02T17:39:52+08:00" content="2016-05-02">
               2016-05-02
             </time>
           </span>
@@ -305,8 +305,8 @@ server$ hexo server
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/博客运营/" itemprop="url" rel="index">
-                    <span itemprop="name">博客运营</span>
+                  <a href="/categories/Go/" itemprop="url" rel="index">
+                    <span itemprop="name">Go</span>
                   </a>
                 </span>
 
@@ -338,73 +338,45 @@ server$ hexo server
       
 
       
-        <h1 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h1><h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><pre><code>$ hexo init [folder]
-</code></pre><p>新建一个网站。如果没有设置 <code>folder</code> ，Hexo 默认在目前的文件夹建立网站。</p>
-<h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><pre><code>$ hexo server
-</code></pre><p>启动服务器。默认情况下，访问网址为：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>。</p>
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>描述                          </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-p, –port</td>
-<td>重设端口                       </td>
-</tr>
-<tr>
-<td>-s, –static</td>
-<td>只使用静态文件                  </td>
-</tr>
-<tr>
-<td>-l, –log</td>
-<td>启动日记记录，使用覆盖记录格式     </td>
-</tr>
-</tbody>
-</table>
-<h2 id="New"><a href="#New" class="headerlink" title="New"></a>New</h2><pre><code>$ hexo new [layout] &lt;title&gt;
-</code></pre><p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用<code>_config.yml</code>中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
-<h2 id="generate-或g"><a href="#generate-或g" class="headerlink" title="generate(或g)"></a>generate(或g)</h2><pre><code>$ hexo generate` 或 `$ hexo g
-</code></pre><p>生成静态文件。</p>
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>描述                      </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-d, –deploy</td>
-<td>文件生成后立即部署网站       </td>
-</tr>
-<tr>
-<td>-w, –watch</td>
-<td>文件生成后立即部署网站       </td>
-</tr>
-</tbody>
-</table>
-<h2 id="deploy-或d"><a href="#deploy-或d" class="headerlink" title="deploy(或d)"></a>deploy(或d)</h2><pre><code>$ hexo deploy
-</code></pre><p>部署网站。</p>
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>描述                      </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>-g, –generate</td>
-<td>部署之前预先生成静态文件     </td>
-</tr>
-</tbody>
-</table>
-<h2 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h2><pre><code>$ hexo clean
-</code></pre><p>清除缓存文件 <code>(db.json)</code> 和已生成的静态文件 <code>(public)</code>。</p>
+        <h1 id="安装Go"><a href="#安装Go" class="headerlink" title="安装Go"></a>安装Go</h1><h2 id="安装Go开发包"><a href="#安装Go开发包" class="headerlink" title="安装Go开发包"></a>安装Go开发包</h2><pre><code>brew install go
+</code></pre><h2 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h2><pre><code>vi ~/.bash_profile
 
+### 打开编辑.bash_profile文件
+
+export GOPATH=$HOME/go
+
+export PATH=$HOME/bin:$GOPATH/bin:$PATH
+
+### 添加环境变量
+
+source ~/.bash_profile
+
+### 保存并生效
+</code></pre><h2 id="测试运行"><a href="#测试运行" class="headerlink" title="测试运行"></a>测试运行</h2><pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+
+    fmt.Printf(&quot;Hello, world&quot;)
+
+}
+</code></pre><p>上述代码保存成一个test.go文件，输入命令go run test.go来测试运行。</p>
+<p>输出结果：</p>
+<pre><code>Hello, world
+</code></pre><h1 id="配置IDE"><a href="#配置IDE" class="headerlink" title="配置IDE"></a>配置IDE</h1><h2 id="安装GoSublime"><a href="#安装GoSublime" class="headerlink" title="安装GoSublime"></a>安装GoSublime</h2><p>通过Package Control安装GoSublime</p>
+<h2 id="设置环境变量-1"><a href="#设置环境变量-1" class="headerlink" title="设置环境变量"></a>设置环境变量</h2><pre><code>Sublime——》Preferences——》Package Settings——》GoSublime——》Settings - Default
+</code></pre><p>打开文件后将env改为如下内容</p>
+<pre><code>&quot;env&quot;: { &quot;GOPATH&quot;:&quot;$HOME/go&quot;,&quot;PATH&quot;: &quot;$HOME/bin:$GOPATH/bin:$PATH&quot; },
+</code></pre><h2 id="测试效果"><a href="#测试效果" class="headerlink" title="测试效果"></a>测试效果</h2><p>Ctrl+B快捷键，输入: </p>
+<pre><code>go run test.go
+</code></pre><p>希望得到的结果是输出Hello, world，但是报错</p>
+<pre><code>Abort. Cannot start MarGo: Exception: Cannot find command `C:\Users\xxx\AppData\Roaming\Sublime Text 3\Packages\User\GoSublime\windows-x64\bin\gosublime.margo_r16.05.01-1_go1.6.1.exe`
+</code></pre><p>运行以下命令安装margo来修正：</p>
+<pre><code>go get -u github.com/slene/margo
+</code></pre><p>margo被放置在目录：</p>
+<pre><code>GOPATH/bin/
+</code></pre>
       
     </div>
     
@@ -424,7 +396,7 @@ server$ hexo server
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
+            <a href="/tags/Go/" rel="tag">#Go</a>
           
         </div>
       
@@ -433,17 +405,13 @@ server$ hexo server
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/22/配置Hexo/" rel="next" title="配置Hexo">
-                <i class="fa fa-chevron-left"></i> 配置Hexo
+              <a href="/2016/05/02/Hexo常用指令/" rel="next" title="Hexo常用指令">
+                <i class="fa fa-chevron-left"></i> Hexo常用指令
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/05/02/Go环境搭建/" rel="prev" title="Go环境搭建">
-                Go环境搭建 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -557,7 +525,7 @@ server$ hexo server
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#指令"><span class="nav-number">1.</span> <span class="nav-text">指令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#init"><span class="nav-number">1.1.</span> <span class="nav-text">init</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#server"><span class="nav-number">1.2.</span> <span class="nav-text">server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#New"><span class="nav-number">1.3.</span> <span class="nav-text">New</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#generate-或g"><span class="nav-number">1.4.</span> <span class="nav-text">generate(或g)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#deploy-或d"><span class="nav-number">1.5.</span> <span class="nav-text">deploy(或d)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clean"><span class="nav-number">1.6.</span> <span class="nav-text">clean</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Go"><span class="nav-number">1.</span> <span class="nav-text">安装Go</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Go开发包"><span class="nav-number">1.1.</span> <span class="nav-text">安装Go开发包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置环境变量"><span class="nav-number">1.2.</span> <span class="nav-text">设置环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试运行"><span class="nav-number">1.3.</span> <span class="nav-text">测试运行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置IDE"><span class="nav-number">2.</span> <span class="nav-text">配置IDE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装GoSublime"><span class="nav-number">2.1.</span> <span class="nav-text">安装GoSublime</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置环境变量-1"><span class="nav-number">2.2.</span> <span class="nav-text">设置环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试效果"><span class="nav-number">2.3.</span> <span class="nav-text">测试效果</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

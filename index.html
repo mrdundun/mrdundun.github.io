@@ -239,6 +239,156 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/02/Go环境搭建/" itemprop="url">
+                  Go环境搭建
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-02T17:39:52+08:00" content="2016-05-02">
+              2016-05-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Go/" itemprop="url" rel="index">
+                    <span itemprop="name">Go</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="安装Go"><a href="#安装Go" class="headerlink" title="安装Go"></a>安装Go</h1><h2 id="安装Go开发包"><a href="#安装Go开发包" class="headerlink" title="安装Go开发包"></a>安装Go开发包</h2><pre><code>brew install go
+</code></pre><h2 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h2><pre><code>vi ~/.bash_profile
+
+### 打开编辑.bash_profile文件
+
+export GOPATH=$HOME/go
+
+export PATH=$HOME/bin:$GOPATH/bin:$PATH
+
+### 添加环境变量
+
+source ~/.bash_profile
+
+### 保存并生效
+</code></pre><h2 id="测试运行"><a href="#测试运行" class="headerlink" title="测试运行"></a>测试运行</h2><pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+
+    fmt.Printf(&quot;Hello, world&quot;)
+
+}
+</code></pre><p>上述代码保存成一个test.go文件，输入命令go run test.go来测试运行。</p>
+<p>输出结果：</p>
+<pre><code>Hello, world
+</code></pre><h1 id="配置IDE"><a href="#配置IDE" class="headerlink" title="配置IDE"></a>配置IDE</h1><h2 id="安装GoSublime"><a href="#安装GoSublime" class="headerlink" title="安装GoSublime"></a>安装GoSublime</h2><p>通过Package Control安装GoSublime</p>
+<h2 id="设置环境变量-1"><a href="#设置环境变量-1" class="headerlink" title="设置环境变量"></a>设置环境变量</h2><pre><code>Sublime——》Preferences——》Package Settings——》GoSublime——》Settings - Default
+</code></pre><p>打开文件后将env改为如下内容</p>
+<pre><code>&quot;env&quot;: { &quot;GOPATH&quot;:&quot;$HOME/go&quot;,&quot;PATH&quot;: &quot;$HOME/bin:$GOPATH/bin:$PATH&quot; },
+</code></pre><h2 id="测试效果"><a href="#测试效果" class="headerlink" title="测试效果"></a>测试效果</h2><p>Ctrl+B快捷键，输入: </p>
+<pre><code>go run test.go
+</code></pre><p>希望得到的结果是输出Hello, world，但是报错</p>
+<pre><code>Abort. Cannot start MarGo: Exception: Cannot find command `C:\Users\xxx\AppData\Roaming\Sublime Text 3\Packages\User\GoSublime\windows-x64\bin\gosublime.margo_r16.05.01-1_go1.6.1.exe`
+</code></pre><p>运行以下命令安装margo来修正：</p>
+<pre><code>go get -u github.com/slene/margo
+</code></pre><p>margo被放置在目录：</p>
+<pre><code>GOPATH/bin/
+</code></pre>
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/02/Hexo常用指令/" itemprop="url">
                   Hexo常用指令
                 </a>
@@ -302,10 +452,10 @@
       
         
           
-            <h1 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h1><h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><p><code>$ hexo init [folder]</code></p>
-<p>新建一个网站。如果没有设置 <code>folder</code> ，Hexo 默认在目前的文件夹建立网站。</p>
-<h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><p><code>$ hexo server</code></p>
-<p>启动服务器。默认情况下，访问网址为：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>。</p>
+            <h1 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h1><h2 id="init"><a href="#init" class="headerlink" title="init"></a>init</h2><pre><code>$ hexo init [folder]
+</code></pre><p>新建一个网站。如果没有设置 <code>folder</code> ，Hexo 默认在目前的文件夹建立网站。</p>
+<h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><pre><code>$ hexo server
+</code></pre><p>启动服务器。默认情况下，访问网址为：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>。</p>
 <table>
 <thead>
 <tr>
@@ -328,10 +478,10 @@
 </tr>
 </tbody>
 </table>
-<h2 id="New"><a href="#New" class="headerlink" title="New"></a>New</h2><p><code>$ hexo new [layout] &lt;title&gt;</code></p>
-<p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用<code>_config.yml</code>中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
-<h2 id="generate-或g"><a href="#generate-或g" class="headerlink" title="generate(或g)"></a>generate(或g)</h2><p><code>$ hexo generate</code> 或 <code>$ hexo g</code></p>
-<p>生成静态文件。</p>
+<h2 id="New"><a href="#New" class="headerlink" title="New"></a>New</h2><pre><code>$ hexo new [layout] &lt;title&gt;
+</code></pre><p>新建一篇文章。如果没有设置 <code>layout</code> 的话，默认使用<code>_config.yml</code>中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
+<h2 id="generate-或g"><a href="#generate-或g" class="headerlink" title="generate(或g)"></a>generate(或g)</h2><pre><code>$ hexo generate` 或 `$ hexo g
+</code></pre><p>生成静态文件。</p>
 <table>
 <thead>
 <tr>
@@ -350,8 +500,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="deploy-或d"><a href="#deploy-或d" class="headerlink" title="deploy(或d)"></a>deploy(或d)</h2><p><code>$ hexo deploy</code></p>
-<p>部署网站。</p>
+<h2 id="deploy-或d"><a href="#deploy-或d" class="headerlink" title="deploy(或d)"></a>deploy(或d)</h2><pre><code>$ hexo deploy
+</code></pre><p>部署网站。</p>
 <table>
 <thead>
 <tr>
@@ -366,8 +516,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h2><p><code>$ hexo clean</code></p>
-<p>清除缓存文件 <code>(db.json)</code> 和已生成的静态文件 <code>(public)</code>。</p>
+<h2 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h2><pre><code>$ hexo clean
+</code></pre><p>清除缓存文件 <code>(db.json)</code> 和已生成的静态文件 <code>(public)</code>。</p>
 
           
         
@@ -482,33 +632,33 @@
           
             <h2 id="添加Tags"><a href="#添加Tags" class="headerlink" title="添加Tags"></a>添加Tags</h2><h3 id="1-创建Tags页面"><a href="#1-创建Tags页面" class="headerlink" title="1.创建Tags页面"></a>1.创建Tags页面</h3><p>hexo new page “tags”</p>
 <h3 id="2-编辑Tags页面"><a href="#2-编辑Tags页面" class="headerlink" title="2.编辑Tags页面"></a>2.编辑Tags页面</h3><p>编辑刚新建的页面</p>
-<p><code>title: tags</code></p>
-<p><code>date: 2016-04-22 18:41:06</code></p>
-<p><code>type: &quot;tags&quot;</code></p>
-<p><code>comments: false</code></p>
-<h3 id="3-修改菜单"><a href="#3-修改菜单" class="headerlink" title="3.修改菜单"></a>3.修改菜单</h3><p>修改_config.yml</p>
-<p><code>menu:</code></p>
-<p><code>home:</code></p>
-<p><code>categories: /categories</code></p>
-<p><code>#about: /about</code></p>
-<p><code>#archives: /archives</code></p>
-<p><code>tags: /tags</code></p>
-<p><code>#commonweal: /404.html&lt;/code&gt;</code></p>
-<h2 id="添加Categories"><a href="#添加Categories" class="headerlink" title="添加Categories"></a>添加Categories</h2><h3 id="1-创建Categories页面"><a href="#1-创建Categories页面" class="headerlink" title="1.创建Categories页面"></a>1.创建Categories页面</h3><p><code>hexo new page categories</code></p>
-<h3 id="2-编辑Categories页面"><a href="#2-编辑Categories页面" class="headerlink" title="2.编辑Categories页面"></a>2.编辑Categories页面</h3><p>编辑刚新建的页面</p>
-<p><code>title: categories</code></p>
-<p><code>date: 2016-04-22 18:45:17</code></p>
-<p><code>type: &quot;categories&quot;</code></p>
-<p><code>comments: false</code></p>
-<h3 id="3-修改菜单-1"><a href="#3-修改菜单-1" class="headerlink" title="3.修改菜单"></a>3.修改菜单</h3><p>修改_config.yml</p>
-<p><code>menu:</code></p>
-<p><code>home: /</code></p>
-<p><code>categories: /categories</code></p>
-<p><code>#about: /about</code></p>
-<p><code>#archives: /archives</code></p>
-<p><code>tags: /tags</code></p>
-<p><code>#commonweal: /404.html&lt;/code&gt;</code></p>
-
+<pre><code>title: tags
+date: 2016-04-22 18:41:06
+type: &quot;tags&quot;
+comments: false
+</code></pre><h3 id="3-修改菜单"><a href="#3-修改菜单" class="headerlink" title="3.修改菜单"></a>3.修改菜单</h3><p>修改_config.yml</p>
+<pre><code>menu:
+    home:
+    categories: /categories
+    #about: /about
+    #archives: /archives
+    tags: /tags
+    #commonweal: /404.html&lt;/code&gt;
+</code></pre><h2 id="添加Categories"><a href="#添加Categories" class="headerlink" title="添加Categories"></a>添加Categories</h2><h3 id="1-创建Categories页面"><a href="#1-创建Categories页面" class="headerlink" title="1.创建Categories页面"></a>1.创建Categories页面</h3><pre><code>hexo new page categories
+</code></pre><h3 id="2-编辑Categories页面"><a href="#2-编辑Categories页面" class="headerlink" title="2.编辑Categories页面"></a>2.编辑Categories页面</h3><p>编辑刚新建的页面</p>
+<pre><code>title: categories
+date: 2016-04-22 18:45:17
+type: &quot;categories&quot;
+comments: false
+</code></pre><h3 id="3-修改菜单-1"><a href="#3-修改菜单-1" class="headerlink" title="3.修改菜单"></a>3.修改菜单</h3><p>修改_config.yml</p>
+<pre><code>menu:
+    home: /
+    categories: /categories
+    #about: /about
+    #archives: /archives
+    tags: /tags
+    #commonweal: /404.html&lt;/code&gt;
+</code></pre>
           
         
       
@@ -620,38 +770,38 @@
       
         
           
-            <h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><h3 id="1-安装Homebrew"><a href="#1-安装Homebrew" class="headerlink" title="1.安装Homebrew"></a>1.安装Homebrew</h3><p><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></p>
-<p><a href="http://brew.sh" target="_blank" rel="external">HomeBrew 安装命令地址</a></p>
-<h3 id="2-安装node-js"><a href="#2-安装node-js" class="headerlink" title="2.安装node.js"></a>2.安装node.js</h3><p><code>brew install node</code></p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><h3 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1.安装hexo"></a>1.安装hexo</h3><p><code>npm install hexo-cli -g</code></p>
-<h3 id="2-安装hexo-developer-git"><a href="#2-安装hexo-developer-git" class="headerlink" title="2.安装hexo-developer-git"></a>2.安装hexo-developer-git</h3><p><code>npm install hexo-deployer-git --save</code></p>
-<h3 id="3-创建blog目录"><a href="#3-创建blog目录" class="headerlink" title="3.创建blog目录"></a>3.创建blog目录</h3><h3 id="4-初始化hexo"><a href="#4-初始化hexo" class="headerlink" title="4.初始化hexo"></a>4.初始化hexo</h3><p>cd到blog目录后执行</p>
-<p><code>hexo init blog</code></p>
-<p><code>npm install</code></p>
-<h3 id="5-启动hexo服务"><a href="#5-启动hexo服务" class="headerlink" title="5.启动hexo服务"></a>5.启动hexo服务</h3><p><code>hexo s</code></p>
-<h3 id="6-本地预览"><a href="#6-本地预览" class="headerlink" title="6.本地预览"></a>6.本地预览</h3><p><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></p>
+            <h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><h3 id="1-安装Homebrew"><a href="#1-安装Homebrew" class="headerlink" title="1.安装Homebrew"></a>1.安装Homebrew</h3><pre><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;`
+</code></pre><p><a href="http://brew.sh" target="_blank" rel="external">HomeBrew 安装命令地址</a></p>
+<h3 id="2-安装node-js"><a href="#2-安装node-js" class="headerlink" title="2.安装node.js"></a>2.安装node.js</h3><pre><code>brew install node
+</code></pre><h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><h3 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1.安装hexo"></a>1.安装hexo</h3><pre><code>npm install hexo-cli -g
+</code></pre><h3 id="2-安装hexo-developer-git"><a href="#2-安装hexo-developer-git" class="headerlink" title="2.安装hexo-developer-git"></a>2.安装hexo-developer-git</h3><pre><code>npm install hexo-deployer-git --save
+</code></pre><h3 id="3-创建blog目录"><a href="#3-创建blog目录" class="headerlink" title="3.创建blog目录"></a>3.创建blog目录</h3><h3 id="4-初始化hexo"><a href="#4-初始化hexo" class="headerlink" title="4.初始化hexo"></a>4.初始化hexo</h3><p>cd到blog目录后执行</p>
+<pre><code>hexo init blog
+npm install
+</code></pre><h3 id="5-启动hexo服务"><a href="#5-启动hexo服务" class="headerlink" title="5.启动hexo服务"></a>5.启动hexo服务</h3><pre><code>hexo s
+</code></pre><h3 id="6-本地预览"><a href="#6-本地预览" class="headerlink" title="6.本地预览"></a>6.本地预览</h3><p><a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></p>
 <h2 id="关联github"><a href="#关联github" class="headerlink" title="关联github"></a>关联github</h2><h3 id="1-在github项目中找到https地址"><a href="#1-在github项目中找到https地址" class="headerlink" title="1.在github项目中找到https地址"></a>1.在github项目中找到https地址</h3><p><a href="https://github.com/xxx/xxx.github.io.git" target="_blank" rel="external">https://github.com/xxx/xxx.github.io.git</a></p>
-<h3 id="2-修改blog目录中的-config-yml"><a href="#2-修改blog目录中的-config-yml" class="headerlink" title="2.修改blog目录中的_config.yml"></a>2.修改blog目录中的_config.yml</h3><p><code>deploy:</code></p>
-<p><code>type: git</code></p>
-<p><code>repository: https://github.com/xxx/xxx.github.io.git</code></p>
-<p><code>branch: master</code></p>
-<p>冒号后要有一个空格</p>
+<h3 id="2-修改blog目录中的-config-yml"><a href="#2-修改blog目录中的-config-yml" class="headerlink" title="2.修改blog目录中的_config.yml"></a>2.修改blog目录中的_config.yml</h3><pre><code>deploy:
+    type: git
+    repository: https://github.com/xxx/xxx.github.io.git
+    branch: master
+</code></pre><p>冒号后要有一个空格</p>
 <h3 id="3-生成ssh-key"><a href="#3-生成ssh-key" class="headerlink" title="3.生成ssh key"></a>3.生成ssh key</h3><p>进入~/.ssh/目录</p>
 <p>执行命令</p>
-<p><code>ssh-keygen -t rsa -C &quot;test@qq.com&quot;</code></p>
-<p>生成id_rsa.pub文件</p>
+<pre><code>ssh-keygen -t rsa -C &quot;test@qq.com&quot;`
+</code></pre><p>生成id_rsa.pub文件</p>
 <h3 id="4-在github填入ssh-key信息"><a href="#4-在github填入ssh-key信息" class="headerlink" title="4.在github填入ssh key信息"></a>4.在github填入ssh key信息</h3><p>Github账户 –&gt; Settings –&gt; SSH keys –&gt; add SSH key</p>
 <p>将id_rsa.pub文件中的内容复制并保存</p>
 <h2 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h2><h3 id="1-生成文章"><a href="#1-生成文章" class="headerlink" title="1.生成文章"></a>1.生成文章</h3><p>hexo new “postName”<br>名为postName.md的文件会建在目录/blog/source/_posts下</p>
 <h3 id="2-clean"><a href="#2-clean" class="headerlink" title="2.clean"></a>2.clean</h3><p>cd到blog目录后执行</p>
-<p><code>hexo clean</code></p>
-<h3 id="3-生成"><a href="#3-生成" class="headerlink" title="3.生成"></a>3.生成</h3><p>cd到blog目录后执行</p>
-<p><code>hexo g</code></p>
-<h3 id="4-发布"><a href="#4-发布" class="headerlink" title="4.发布"></a>4.发布</h3><p>cd到blog目录后执行</p>
-<p><code>hexo d</code></p>
-<h2 id="安装theme"><a href="#安装theme" class="headerlink" title="安装theme"></a>安装theme</h2><h3 id="1-下载theme"><a href="#1-下载theme" class="headerlink" title="1.下载theme"></a>1.下载theme</h3><p>cd到 blog 目录下执行如下命令：</p>
-<p><code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code></p>
-<h3 id="2-配置theme"><a href="#2-配置theme" class="headerlink" title="2.配置theme"></a>2.配置theme</h3><p>将blog目录下_config.yml里theme的名称landscape修改为next</p>
+<pre><code>hexo clean
+</code></pre><h3 id="3-生成"><a href="#3-生成" class="headerlink" title="3.生成"></a>3.生成</h3><p>cd到blog目录后执行</p>
+<pre><code>hexo g
+</code></pre><h3 id="4-发布"><a href="#4-发布" class="headerlink" title="4.发布"></a>4.发布</h3><p>cd到blog目录后执行</p>
+<pre><code>hexo d
+</code></pre><h2 id="安装theme"><a href="#安装theme" class="headerlink" title="安装theme"></a>安装theme</h2><h3 id="1-下载theme"><a href="#1-下载theme" class="headerlink" title="1.下载theme"></a>1.下载theme</h3><p>cd到 blog 目录下执行如下命令：</p>
+<pre><code>git clone https://github.com/iissnan/hexo-theme-next themes/next
+</code></pre><h3 id="2-配置theme"><a href="#2-配置theme" class="headerlink" title="2.配置theme"></a>2.配置theme</h3><p>将blog目录下_config.yml里theme的名称landscape修改为next</p>
 <h3 id="3-更改theme内容"><a href="#3-更改theme内容" class="headerlink" title="3.更改theme内容"></a>3.更改theme内容</h3><p>比如修改名称，描述，头像。<br>修改blog/_config.yml文件和blog/themes/next/_config.yml文件中对应的属性名称即可。</p>
 <p><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT 使用文档</a></p>
 <h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><h3 id="1-添加CNAME文件"><a href="#1-添加CNAME文件" class="headerlink" title="1.添加CNAME文件"></a>1.添加CNAME文件</h3><p>在/blog/themes/landscape/source目录下新建文件名为：CNAME文件，直接将域名写入。</p>
@@ -726,7 +876,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -734,7 +884,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -743,7 +893,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
